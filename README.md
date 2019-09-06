@@ -32,7 +32,7 @@ Albeit this will be futher explained later at this note.
 
 Also, you can find payloads to play with at [HTML5 Security Cheatsheet](http://html5sec.org/)   
 
-1. XSS - reflected
+#### 1. XSS - reflected  
    It is recommended that you try to read more about this in the docs section of root-me and try to solve a challenge for practice.  
    Initial code:  
    ```php
