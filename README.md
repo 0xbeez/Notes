@@ -35,7 +35,7 @@ Also, you can find payloads to play with at [HTML5 Security Cheatsheet](http://h
 1. XSS - reflected
    It is recommended that you try to read more about this in the docs section of root-me and try to solve a challenge for practice.  
    Initial code:  
-   `
+   ```php
    <?php 
    // header included here
    // you will need a php server to run the example 
@@ -54,4 +54,4 @@ Also, you can find payloads to play with at [HTML5 Security Cheatsheet](http://h
         -->
     </body>
    </html>
-   `  
+   ```  
