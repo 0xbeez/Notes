@@ -47,7 +47,7 @@ Also, you can find payloads to play with at [HTML5 Security Cheatsheet](http://h
    
    <html>
     <body>
-        <h1> <?php echo "Hello".$GET['try']</h1>
+        <h1> <?php echo "Hello".$GET['try'] ?></h1>
         <!--
         This will output the concat result of Hello and what you supply as argument to the ?try parameter
         localhost:80/yourcode.php?try={payload later goes here}
