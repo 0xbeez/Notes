@@ -30,4 +30,28 @@ You can read about this at [MDN](https://developer.mozilla.org/en-US/docs/Web/HT
 The HTTP X-XSS-Protection response header is a feature of Internet Explorer, Chrome and Safari that stops pages from loading when they detect reflected cross-site scripting (XSS) attacks. Although these protections are largely unnecessary in modern browsers when sites implement a strong Content-Security-Policy that disables the use of inline JavaScript ('unsafe-inline'), they can still provide protections for users of older web browsers that don't yet support CSP.
 Albeit this will be futher explained later at this note.  
 
-Also, you can find payloads to play with at [HTML5 Security Cheatsheet](http://html5sec.org/)  
+Also, you can find payloads to play with at [HTML5 Security Cheatsheet](http://html5sec.org/)   
+
+1. XSS - reflected
+   It is recommended that you try to read more about this in the docs section of root-me and try to solve a challenge for practice.  
+   Initial code:  
+   `
+   <?php 
+   // header included here
+   // you will need a php server to run the example 
+   // you can use the default php server by running
+   // php -s localhost:80
+   // read more about php built-in we server here
+   // https://www.php.net/manual/en/features.commandline.webserver.php
+   ?>
+   
+   <html>
+    <body>
+        <h1> <?php echo "Hello".$GET['try']</h1>
+        <!--
+        This will output the concat result of Hello and what you supply as argument to the ?try parameter
+        localhost:80/yourcode.php?try={payload later goes here}
+        -->
+    </body>
+   </html>
+   `  
