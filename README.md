@@ -87,3 +87,18 @@ Also, you can find payloads to play with at [HTML5 Security Cheatsheet](http://h
    Its time for you to go to rootme and play.  
    Additional for CTF creation: 
    **Check PhantomJS the scriptable headless browser, or selenium on python if you want to automate the behavior of a user**  
+
+### 2. XSS - Stored 
+   Written on Sep 6 2019 
+   As You would have figured by now, for reflected XSS an attacker would have to send a URL with the payload in order to successfully perform the attack. This is not the case for stored XSS as it would trigger on every page which has the injected payload loaded from a file or a database. 
+   This bug can be found on sections loading data dynamically from an external storage source, and the payload can be inserted in a signup/message/comment-like field.
+   Same concepts for reflected XSS are inherited, however it is the client side equivalent to SQL injection, targeting users instead of the application itself.  
+   ![alt text](https://www.imperva.com/learn/wp-content/uploads/sites/13/2019/01/sorted-XSS.png "image taken from impreva")  
+   _Solve root-me tasks and if you have anything to add or any issues file a new issue_  
+
+
+### [REFERENCES AND READS]
+[XSS Attacks - Impreva](https://www.imperva.com/learn/application-security/cross-site-scripting-xss-attacks/)
+[X-XSS-Protection Header - MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection/)
+[CSP: Content Security Policy Header - MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/)
+[XSS Injection - swisskyrepo/PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20Injection/)
