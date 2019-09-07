@@ -98,7 +98,7 @@ Also, you can find payloads to play with at [HTML5 Security Cheatsheet](http://h
 
 
 ### [REFERENCES AND READS]
-[XSS Attacks - Impreva](https://www.imperva.com/learn/application-security/cross-site-scripting-xss-attacks/)
-[X-XSS-Protection Header - MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection/)
-[CSP: Content Security Policy Header - MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/)
-[XSS Injection - swisskyrepo/PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20Injection/)
+* [XSS Attacks - Impreva](https://www.imperva.com/learn/application-security/cross-site-scripting-xss-attacks/)  
+* [X-XSS-Protection Header - MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection/)  
+* [CSP: Content Security Policy Header - MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/)  
+* [XSS Injection - swisskyrepo/PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20Injection/)  
