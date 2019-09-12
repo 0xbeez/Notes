@@ -96,6 +96,29 @@ Also, you can find payloads to play with at [HTML5 Security Cheatsheet](http://h
    ![alt text](https://www.imperva.com/learn/wp-content/uploads/sites/13/2019/01/sorted-XSS.png "image taken from impreva")  
    _Solve root-me tasks and if you have anything to add or any issues file a new issue_  
 
+## Protection Headers   
+### 1. X-XSS-Protection  
+   Written on Sep 09 2019
+   The **X-XSS-Protection** response header is a security feature implemented by Chrome, Safari, and IE to help block a webpage on the event of detecting reflected injection.  
+   Note that modern browsers have stronger features such as CSP, which will be discussed latehowever this is handy when dealing a large portion of the user base relying on older browsers which do not support that feature.  
+   In case you are running **Apache**, this can be added by just appending  
+   ```
+   Header set X-XSS-Protection " (code 0 or 1); [mode=block]"
+   or 
+   Header set X-XSS-Protection " (code 1); [report=<reporting-uri>]"
+   ```  
+   to the _.htaccess_ file.  
+   In case you are running **Nginx** use the add_header directive  
+   ```
+   add_header "HEADER GOES HERE"
+   ```  
+   It is documented [**here**](http://nginx.org/en/docs/http/ngx_http_headers_module.html#add_header).  
+   **code**: can be either 0 or 1, describing the state of the XSS filter (0 for disabled). With 1 set as value, the browser will try to sanitize the page removing the unsafe parts. Note that this is not the recommended usage as this can be leveraged by attackers to attack the business logic of a web-app still and hijack the execution flow of existing JS code.  
+   **mode** (_optional but **recommended**_): can equal block, the browser will prevent the rendering of the page if an attack  is detected instead of trying to strip away the unsafe parts.  
+   **report**: (_optional and available only on Chromium_), will report detected violations using the functionality of the CSP after sanitizing the page.  
+   _For Browser compatibility, [**check MDN**](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection#Browser_compatibility)__  
+
+#  
 
 ### [REFERENCES AND READS]
 * [XSS Attacks - Impreva](https://www.imperva.com/learn/application-security/cross-site-scripting-xss-attacks/)  
