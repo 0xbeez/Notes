@@ -125,3 +125,5 @@ Also, you can find payloads to play with at [HTML5 Security Cheatsheet](http://h
 * [X-XSS-Protection Header - MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection/)  
 * [CSP: Content Security Policy Header - MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/)  
 * [XSS Injection - swisskyrepo/PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20Injection/)  
+* [Advanced XSS Knowledge exploit-db](https://www.exploit-db.com/papers/13646)
+* [Bypassing XSS filters - %00 How to](https://null-byte.wonderhowto.com/how-to/advanced-techniques-bypass-defeat-xss-filters-part-1-0190257/)
