@@ -1,21 +1,3 @@
-# InfoSec related notes 
-
-I have started to write down notes on security related resources I've been scanning.
-This resource might be helpful for people just getting started with Information Security and for future blog posts by me.  
-
-## License
-
-[![CC BY-NC-SA 4.0](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-nc-sa/4.0/)  
-
-This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).  
-
-## The Notes Themselves
-> Influenced by LiveOverFlow's youtube channel, and some additional resources 
-> Videos [here](https://www.youtube.com/channel/UClcE-kVhqyiHCcjYwcpfj9w)
-> root-me platform [here](https://root-me.org)  
-
-[comment]: <> (description will be added)  
-
 ### Web - XSS
 Written on Sep 6 2019
 > Influenced by a plethora of tasks on  [rootme](https://root-me.org/)
@@ -95,6 +77,10 @@ Also, you can find payloads to play with at [HTML5 Security Cheatsheet](http://h
    Same concepts for reflected XSS are inherited, however it is the client side equivalent to SQL injection, targeting users instead of the application itself.  
    ![alt text](https://www.imperva.com/learn/wp-content/uploads/sites/13/2019/01/sorted-XSS.png "image taken from impreva")  
    _Solve root-me tasks and if you have anything to add or any issues file a new issue_  
+
+[comment]: <> (add XSS stored example)
+[comment]: <> (add uXSS example)
+[comment]: <> (add on the methodology of fuzing fo filter bypass)      
 
 ## Protection Headers   
 ### 1. X-XSS-Protection  
